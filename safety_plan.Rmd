@@ -64,7 +64,7 @@ project_year <- stringr::str_match(params$repo_url, "safety_plan_[^_]+_([0-9]{4}
 gis_planning_file <- "planning_20250721.gpkg"
 
 # Create links
-link_kml <- paste0(params$repo_url, '/blob/main/docs/sites_', project_region, '_', project_year, '_', format(Sys.Date(), '%Y%m%d'), '_kml_gpx.zip')
+link_kml <- paste0(params$repo_url, '/raw/main/docs/sites_', project_region, '_', project_year, '_', format(Sys.Date(), '%Y%m%d'), '_kml_gpx.zip')
 link_pdf <- paste0(params$repo_url, '/blob/main/docs/safety_plan_sern_', project_region, '_', project_year, '.pdf')
 # We only have maps for parsnip
 # link_fieldmaps <- 'https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/'
@@ -361,7 +361,7 @@ Fieldwork will focus on baseline monitoring in the Nechako River, Upper Fraser R
 
 <br>
 
-Fieldwork methods will result in products feeding reporting formats such as our [2023/2024](https://github.com/NewGraphEnvironment/fish_passage_fraser_2023_reporting) report. We generally follow procedures in:
+Fieldwork methods will result in products feeding reporting formats such as our [2023/2024](https://www.newgraphenvironment.com/fish_passage_fraser_2023_reporting/) report. We generally follow procedures in:
 
 -   [fish passage assessments](https://www2.gov.bc.ca/assets/gov/environment/natural-resource-stewardship/land-based-investment/forests-for-tomorrow/field-assessment-for-determining-fish-passage-status-of-cbs.pdf) [@ministryofenvironment2011Fieldassessment]
 
