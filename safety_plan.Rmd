@@ -1,5 +1,5 @@
 ---
-title: "Safety Plan Peace 2025"
+title: "Safety Plan Fraser 2025"
 author: "Al Irvine"
 output:
   pagedown::html_letter:
@@ -147,7 +147,7 @@ Accommodation: `r hotel2  `
 
 ## Crew Members {.unnumbered}
 
-New Graph Employees Al Irvine and Lucy Schick will be joined by crews from McLeod Lake Indian Band. All crew member information and emergency contacts can be found below.
+New Graph Employees Al Irvine and Lucy Schick may be joined by other groups/individuals from the area. All crew member information and emergency contacts can be found below.
 
 <br>
 
@@ -190,28 +190,32 @@ MINIMUM REQUIREMENTS FOR EACH CREW MEMBER INCLUDES GOOD QUALITY AND APPROPRIATEL
 MINIMUM REQUIREMENTS FOR FIELD TRUCKS INCLUDE A QUALITY RADIO APPROPRIATE FOR FOREST SERVICE ROADS, OFF-ROAD CAPABLE TIRES IN GOOD CONDITION, SPARE TIRE, JACK, AND TOOLS.
 
 <br>
+<br>
+<br>
+
 
 ```{r table-equipment, eval=TRUE}
 eq <- readr::read_csv("~/Projects/repo/onboarding/data/equipment.csv")
 
-## personal equipment 
-
-tab_eq_pers <- eq |> 
-  dplyr::filter(!is.na(eq_pers_standard)) |>  
+## personal equipment
+tab_eq_pers <- eq |>
+  dplyr::filter(!is.na(eq_pers_standard)) |>
   dplyr::arrange(eq_safety) |>  ## have these first on the list
-  dplyr::select(eq_item) |>  
-  my_untidy_table() |>
-  dplyr::rename(Equipment = eq_item)
+  dplyr::select(Equipment = eq_item) |> 
+  my_untidy_table_2(n_cols = 4)
 
 my_caption <- 'Personal Equipment Checklist - SEE NOTE ABOVE FOR MINIMUM REQUIREMENTS'
 
-tab_eq_pers |>  
-  knitr::kable(caption = my_caption, label = NA) |>  
+tab_eq_pers |>
+  knitr::kable(caption = my_caption, label = NA) |>
   kableExtra::kable_styling(
     bootstrap_options = c("condensed", "responsive"),
     full_width = TRUE,
     font_size = font_set
   )
+
+
+
 
 ```
 
@@ -221,28 +225,69 @@ tab_eq_pers |>
 
 ##equipment for the crew
 tab_eq_crew <- eq |>
-  dplyr::filter(if_any(dplyr::starts_with('eq_task'), ~ . == 'fish passage')) |>  
-  dplyr::filter(is.na(eq_pers_standard)) |>  
-  dplyr::arrange(eq_safety) |>  
-  dplyr::select(eq_item) |>  
-  my_untidy_table() |>  
-  dplyr::rename(`Crew Equipment Checklist` = eq_item)
+  dplyr::filter(if_any(dplyr::starts_with('eq_task'), ~ . %in% c("fish passage", "uav", "electrofishing"))) |>
+  dplyr::filter(is.na(eq_pers_standard)) |>
+  # dplyr::arrange(eq_safety) |>
+  dplyr::select(`Crew Equipment Checklist` = eq_item) |>
+  my_untidy_table_2(n_cols = 4)
 
 my_caption <- 'Crew Equipment Checklist - SEE NOTE ABOVE FOR MINIMUM REQUIREMENTS'
 
-tab_eq_crew |>  
-  knitr::kable(caption = my_caption, label = NA) |>    
+tab_eq_crew |>
+  knitr::kable(caption = my_caption, label = NA) |>
   kableExtra::kable_styling(
     bootstrap_options = c("condensed", "responsive"),
     full_width = TRUE,
     font_size = font_set
   )
 
+```
+
+<br>
+
+```{r equip-edna}
+
+##equipment for the crew
+tab_eq_edna <- eq |>
+  dplyr::filter(if_any(dplyr::starts_with('eq_task'), ~ . == "edna")) |> 
+  dplyr::select(`eDNA Equipment Checklist` = eq_item ) |>
+  my_untidy_table_2(n_cols = 4)
+
+my_caption <- 'eDNA Equipment Checklist - SEE NOTE ABOVE FOR MINIMUM REQUIREMENTS'
+
+tab_eq_edna |>
+  knitr::kable(caption = my_caption, label = NA) |>
+  kableExtra::kable_styling(
+    bootstrap_options = c("condensed", "responsive"),
+    full_width = TRUE,
+    font_size = font_set
+  )
 
 ```
 
 <br>
 
+```{r equip-cabin}
+
+##equipment for the crew
+tab_eq_cabin <- eq |>
+  dplyr::filter(if_any(dplyr::starts_with('eq_task'), ~ . == "cabin")) |> 
+  dplyr::select(`CABIN Equipment Checklist` = eq_item ) |>
+  my_untidy_table_2(n_cols = 4)
+
+my_caption <- 'CABIN Equipment Checklist - SEE NOTE ABOVE FOR MINIMUM REQUIREMENTS'
+
+tab_eq_cabin |>
+  knitr::kable(caption = my_caption, label = NA) |>
+  kableExtra::kable_styling(
+    bootstrap_options = c("condensed", "responsive"),
+    full_width = TRUE,
+    font_size = font_set
+  )
+
+```
+
+<br>
 
 ```{r equip-truck}
 
@@ -253,10 +298,14 @@ eq |>
   dplyr::filter(eq_truck == 'x') |>  
   dplyr::filter(is.na(eq_pers_standard)) |>  
   dplyr::arrange(eq_safety) |>  
-  dplyr::select(eq_item) |>  
-  my_untidy_table() |>  
-  dplyr::rename(Equipment = eq_item) |> 
-  fpr::fpr_kable(caption = my_caption, scroll = FALSE)
+  dplyr::select(Equipment = eq_item) |> 
+  my_untidy_table_2(n_cols = 4) |> 
+  knitr::kable(caption = my_caption, label = NA) |> 
+  kableExtra::kable_styling(
+  bootstrap_options = c("condensed", "responsive"),
+  full_width = TRUE,
+  font_size = font_set
+)
 
 ```
 
