@@ -84,6 +84,11 @@ hospital_name <- 'University Hospital of Northern British Columbia'
 hospital_phone <- '250-565-2000'
 hospital_address <- '1475 Edmonton St., Prince George, BC V2M 1S2'
 
+hospital_name2 <- 'G.R. Baker Memorial Hospital'
+hospital_phone2 <- '250-985-5600'
+hospital_address2 <- '543 Front St, Quesnel, BC V2J 2K7'
+
+
 ```
 
 ```{r import-projects}
@@ -193,9 +198,6 @@ MINIMUM REQUIREMENTS FOR EACH CREW MEMBER INCLUDES GOOD QUALITY AND APPROPRIATEL
 MINIMUM REQUIREMENTS FOR FIELD TRUCKS INCLUDE A QUALITY RADIO APPROPRIATE FOR FOREST SERVICE ROADS, OFF-ROAD CAPABLE TIRES IN GOOD CONDITION, SPARE TIRE, JACK, AND TOOLS.
 
 <br>
-<br>
-<br>
-
 
 ```{r table-equipment, eval=TRUE}
 eq <- readr::read_csv("~/Projects/repo/onboarding/data/equipment.csv")
@@ -312,7 +314,7 @@ eq |>
 
 ```
 
-<br>
+\newpage
 
 ## Nearest Hospitals {.unnumbered}
 
@@ -324,6 +326,36 @@ ggmap::register_google(key = Sys.getenv('GOOG_API_KEY'))
 
 #define the area of the base map by using a bounding box 
 mybasemap <- ggmap::get_map(location = hospital_address,
+                     source = "google",
+                     zoom = 16,
+                    maptype = "roadmap")  
+
+# Extract the center coordinates from the map object
+center_lon <- attr(mybasemap, "bb")$ll.lon + (attr(mybasemap, "bb")$ur.lon - attr(mybasemap, "bb")$ll.lon) / 2
+center_lat <- attr(mybasemap, "bb")$ll.lat + (attr(mybasemap, "bb")$ur.lat - attr(mybasemap, "bb")$ll.lat) / 2
+
+# Plot the map with the hospital symbol at the center
+ggmap::ggmap(mybasemap) +
+  geom_text(aes(x = center_lon, y = center_lat), 
+            label = "H", 
+            size = 10, 
+            colour = "red", 
+            fontface = "bold")
+
+
+
+```
+
+<br>
+
+```{r hospital-2, fig.cap=my_caption, fig.width=6, eval=TRUE}
+my_caption = paste(hospital_name2, hospital_address2, hospital_phone2, sep = ' - ')
+
+##register google key defined in 'R/private_info.R' file
+ggmap::register_google(key = Sys.getenv('GOOG_API_KEY'))
+
+#define the area of the base map by using a bounding box 
+mybasemap <- ggmap::get_map(location = hospital_address2,
                      source = "google",
                      zoom = 16,
                     maptype = "roadmap")  
