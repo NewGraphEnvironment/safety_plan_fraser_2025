@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <gpx version="1.1" creator="GDAL 3.8.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
 <metadata>
-<bounds minlat="52.891640521188968" minlon="-124.708949319945887" maxlat="54.145007338686106" maxlon="-119.318572586016046"/>                                   
+<bounds minlat="52.891706877070845" minlon="-124.708948950407844" maxlat="54.145007338686106" maxlon="-119.318397725061814"/>                                   
 </metadata>
 <wpt lat="54.056252521893015" lon="-122.764608228494438">
   <name>12200024 - high</name>
@@ -83,31 +83,31 @@
   <name>19703358 - mod</name>
   <desc>bt_rearing - 17.4km. Several other major CBS upstream.  CH caprured near the confluence of this stream and the Fraser River.</desc>
 </wpt>
-<wpt lat="54.109286956370084" lon="-124.698744674802484">
+<wpt lat="54.109287172218799" lon="-124.698729385802437">
   <name>199171 - NA</name>
   <desc>bt_rearing - 2.3km. NA</desc>
 </wpt>
-<wpt lat="54.108567158281687" lon="-124.708949319945887">
+<wpt lat="54.108558174528468" lon="-124.708948950407844">
   <name>199172 - NA</name>
   <desc>bt_rearing - 1.6km. NA</desc>
 </wpt>
-<wpt lat="54.106065885366803" lon="-124.545617828451782">
+<wpt lat="54.106082086749062" lon="-124.545756097658071">
   <name>199173 - NA</name>
   <desc>bt_rearing - 6.2km. NA</desc>
 </wpt>
-<wpt lat="54.108025529382822" lon="-124.138618070471566">
+<wpt lat="54.108241626924432" lon="-124.138578102991545">
   <name>199190 - NA</name>
   <desc>bt_rearing - 28.8km. NA</desc>
 </wpt>
-<wpt lat="53.540947820646231" lon="-120.724477853253703">
+<wpt lat="53.540992441182041" lon="-120.724460365601914">
   <name>199237 - NA</name>
   <desc>bt_rearing - 25.2km. NA</desc>
 </wpt>
-<wpt lat="53.893024284295954" lon="-121.66209985485294">
+<wpt lat="53.893042255548025" lon="-121.662099280765119">
   <name>199260 - NA</name>
   <desc>bt_rearing - 0.9km. NA</desc>
 </wpt>
-<wpt lat="53.82968574699585" lon="-121.383737166359012">
+<wpt lat="53.829676762400908" lon="-121.383737512307718">
   <name>199267 - NA</name>
   <desc>bt_rearing - 12.5km. NA</desc>
 </wpt>
@@ -141,9 +141,9 @@
 </wpt>
 <wpt lat="54.110490979870015" lon="-124.701960650966797">
   <name>7622 - NA</name>
-  <desc>bt_rearing - 2.1km. NA</desc>
+  <desc>bt_rearing - 2km. NA</desc>
 </wpt>
-<wpt lat="52.891640521188968" lon="-119.318572586016046">
+<wpt lat="52.891706877070845" lon="-119.318397725061814">
   <name>199278 - NA</name>
   <desc>bt_rearing - 0.5km. NA</desc>
 </wpt>
