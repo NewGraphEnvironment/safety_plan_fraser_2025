@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document id="root_doc">
-<Schema name="sites_fraser_2025_20250908" id="sites_fraser_2025_20250908">
+<Schema name="sites_fraser_2025_20250910" id="sites_fraser_2025_20250910">
 	<SimpleField name="id" type="float"></SimpleField>
 	<SimpleField name="bt_network_km" type="float"></SimpleField>
 	<SimpleField name="bt_spawning_km" type="float"></SimpleField>
@@ -22,10 +22,10 @@
 	<SimpleField name="long" type="float"></SimpleField>
 	<SimpleField name="lat" type="float"></SimpleField>
 </Schema>
-<Folder><name>sites_fraser_2025_20250908</name>
+<Folder><name>sites_fraser_2025_20250910</name>
   <Placemark>
 	<name>12200024 - high</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">12200024</SimpleData>
 		<SimpleData name="bt_network_km">0</SimpleData>
 		<SimpleData name="bt_spawning_km">0</SimpleData>
@@ -48,7 +48,7 @@
   </Placemark>
   <Placemark>
 	<name>12202167 - mod</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">12202167</SimpleData>
 		<SimpleData name="bt_network_km">0</SimpleData>
 		<SimpleData name="bt_spawning_km">0</SimpleData>
@@ -70,7 +70,7 @@
   </Placemark>
   <Placemark>
 	<name>126267 - mod</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">126267</SimpleData>
 		<SimpleData name="bt_network_km">43.1</SimpleData>
 		<SimpleData name="bt_spawning_km">11</SimpleData>
@@ -94,7 +94,7 @@
   </Placemark>
   <Placemark>
 	<name>126290 - high</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">126290</SimpleData>
 		<SimpleData name="bt_network_km">503.9</SimpleData>
 		<SimpleData name="bt_spawning_km">83.2</SimpleData>
@@ -118,7 +118,7 @@
   </Placemark>
   <Placemark>
 	<name>126316 - mod</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">126316</SimpleData>
 		<SimpleData name="bt_network_km">340.4</SimpleData>
 		<SimpleData name="bt_spawning_km">69.6</SimpleData>
@@ -142,7 +142,7 @@
   </Placemark>
   <Placemark>
 	<name>196051 - high</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">196051</SimpleData>
 		<SimpleData name="bt_network_km">37.1</SimpleData>
 		<SimpleData name="bt_spawning_km">7</SimpleData>
@@ -165,7 +165,7 @@
   </Placemark>
   <Placemark>
 	<name>196072 - high</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">196072</SimpleData>
 		<SimpleData name="bt_network_km">279.5</SimpleData>
 		<SimpleData name="bt_spawning_km">64.7</SimpleData>
@@ -189,7 +189,7 @@
   </Placemark>
   <Placemark>
 	<name>196085 - high</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">196085</SimpleData>
 		<SimpleData name="bt_network_km">196.9</SimpleData>
 		<SimpleData name="bt_spawning_km">33.9</SimpleData>
@@ -214,7 +214,7 @@
   </Placemark>
   <Placemark>
 	<name>196151 - high</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">196151</SimpleData>
 		<SimpleData name="bt_network_km">270.1</SimpleData>
 		<SimpleData name="bt_spawning_km">60.9</SimpleData>
@@ -239,7 +239,7 @@
   </Placemark>
   <Placemark>
 	<name>196201 - high</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">196201</SimpleData>
 		<SimpleData name="bt_network_km">20.9</SimpleData>
 		<SimpleData name="bt_spawning_km">2.8</SimpleData>
@@ -263,7 +263,7 @@
   </Placemark>
   <Placemark>
 	<name>196207 - mod</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">196207</SimpleData>
 		<SimpleData name="bt_network_km">3.1</SimpleData>
 		<SimpleData name="bt_spawning_km">1.9</SimpleData>
@@ -288,7 +288,7 @@
   </Placemark>
   <Placemark>
 	<name>196264 - mod</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">196264</SimpleData>
 		<SimpleData name="bt_network_km">45.8</SimpleData>
 		<SimpleData name="bt_spawning_km">3.8</SimpleData>
@@ -312,7 +312,7 @@
   </Placemark>
   <Placemark>
 	<name>196328 - mod</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">196328</SimpleData>
 		<SimpleData name="bt_network_km">10.6</SimpleData>
 		<SimpleData name="bt_spawning_km">2</SimpleData>
@@ -336,7 +336,7 @@
   </Placemark>
   <Placemark>
 	<name>196340 - mod</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">196340</SimpleData>
 		<SimpleData name="bt_network_km">6</SimpleData>
 		<SimpleData name="bt_spawning_km">0.3</SimpleData>
@@ -360,7 +360,7 @@
   </Placemark>
   <Placemark>
 	<name>19702777 - high</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">19702777</SimpleData>
 		<SimpleData name="bt_network_km">34</SimpleData>
 		<SimpleData name="bt_spawning_km">3.4</SimpleData>
@@ -382,7 +382,7 @@
   </Placemark>
   <Placemark>
 	<name>19703257 - high</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">19703257</SimpleData>
 		<SimpleData name="bt_network_km">196.4</SimpleData>
 		<SimpleData name="bt_spawning_km">33.4</SimpleData>
@@ -406,7 +406,7 @@
   </Placemark>
   <Placemark>
 	<name>19703286 - high</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">19703286</SimpleData>
 		<SimpleData name="bt_network_km">42.2</SimpleData>
 		<SimpleData name="bt_spawning_km">9.3</SimpleData>
@@ -430,7 +430,7 @@
   </Placemark>
   <Placemark>
 	<name>19703295 - high</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">19703295</SimpleData>
 		<SimpleData name="bt_network_km">30.4</SimpleData>
 		<SimpleData name="bt_spawning_km">3.4</SimpleData>
@@ -452,7 +452,7 @@
   </Placemark>
   <Placemark>
 	<name>19703303 - mod</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">19703303</SimpleData>
 		<SimpleData name="bt_network_km">26.1</SimpleData>
 		<SimpleData name="bt_spawning_km">4.8</SimpleData>
@@ -475,7 +475,7 @@
   </Placemark>
   <Placemark>
 	<name>19703358 - mod</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">19703358</SimpleData>
 		<SimpleData name="bt_network_km">61.5</SimpleData>
 		<SimpleData name="bt_spawning_km">12.1</SimpleData>
@@ -499,7 +499,7 @@
   </Placemark>
   <Placemark>
 	<name>199171 - NA</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">199171</SimpleData>
 		<SimpleData name="bt_network_km">13</SimpleData>
 		<SimpleData name="bt_spawning_km">0</SimpleData>
@@ -521,7 +521,7 @@
   </Placemark>
   <Placemark>
 	<name>199172 - NA</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">199172</SimpleData>
 		<SimpleData name="bt_network_km">16.4</SimpleData>
 		<SimpleData name="bt_spawning_km">1</SimpleData>
@@ -543,7 +543,7 @@
   </Placemark>
   <Placemark>
 	<name>199173 - NA</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">199173</SimpleData>
 		<SimpleData name="bt_network_km">42.7</SimpleData>
 		<SimpleData name="bt_spawning_km">4</SimpleData>
@@ -566,7 +566,7 @@
   </Placemark>
   <Placemark>
 	<name>199190 - NA</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">199190</SimpleData>
 		<SimpleData name="bt_network_km">105.9</SimpleData>
 		<SimpleData name="bt_spawning_km">10.2</SimpleData>
@@ -589,7 +589,7 @@
   </Placemark>
   <Placemark>
 	<name>199237 - NA</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">199237</SimpleData>
 		<SimpleData name="bt_network_km">80.6</SimpleData>
 		<SimpleData name="bt_spawning_km">17.7</SimpleData>
@@ -612,7 +612,7 @@
   </Placemark>
   <Placemark>
 	<name>199260 - NA</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">199260</SimpleData>
 		<SimpleData name="bt_network_km">4.2</SimpleData>
 		<SimpleData name="bt_spawning_km">0</SimpleData>
@@ -634,7 +634,7 @@
   </Placemark>
   <Placemark>
 	<name>199267 - NA</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">199267</SimpleData>
 		<SimpleData name="bt_network_km">51.4</SimpleData>
 		<SimpleData name="bt_spawning_km">8.8</SimpleData>
@@ -657,7 +657,7 @@
   </Placemark>
   <Placemark>
 	<name>24400646 - mod</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">24400646</SimpleData>
 		<SimpleData name="bt_network_km">11.6</SimpleData>
 		<SimpleData name="bt_spawning_km">2.3</SimpleData>
@@ -681,7 +681,7 @@
   </Placemark>
   <Placemark>
 	<name>24401504 - mod</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">24401504</SimpleData>
 		<SimpleData name="bt_network_km">23</SimpleData>
 		<SimpleData name="bt_spawning_km">2.8</SimpleData>
@@ -704,7 +704,7 @@
   </Placemark>
   <Placemark>
 	<name>24401692 - mod</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">24401692</SimpleData>
 		<SimpleData name="bt_network_km">28.3</SimpleData>
 		<SimpleData name="bt_spawning_km">7.1</SimpleData>
@@ -726,7 +726,7 @@
   </Placemark>
   <Placemark>
 	<name>24402183 - mod</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">24402183</SimpleData>
 		<SimpleData name="bt_network_km">14.4</SimpleData>
 		<SimpleData name="bt_spawning_km">4.2</SimpleData>
@@ -748,7 +748,7 @@
   </Placemark>
   <Placemark>
 	<name>24723694 - high</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">24723694</SimpleData>
 		<SimpleData name="bt_network_km">282.5</SimpleData>
 		<SimpleData name="bt_spawning_km">67</SimpleData>
@@ -772,7 +772,7 @@
   </Placemark>
   <Placemark>
 	<name>24723695 - mod</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">24723695</SimpleData>
 		<SimpleData name="bt_network_km">254.1</SimpleData>
 		<SimpleData name="bt_spawning_km">39.6</SimpleData>
@@ -796,7 +796,7 @@
   </Placemark>
   <Placemark>
 	<name>24727190 - mod</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">24727190</SimpleData>
 		<SimpleData name="bt_network_km">248.3</SimpleData>
 		<SimpleData name="bt_spawning_km">53.7</SimpleData>
@@ -820,7 +820,7 @@
   </Placemark>
   <Placemark>
 	<name>7622 - NA</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">7622</SimpleData>
 		<SimpleData name="bt_network_km">11.8</SimpleData>
 		<SimpleData name="bt_spawning_km">0</SimpleData>
@@ -842,7 +842,7 @@
   </Placemark>
   <Placemark>
 	<name>199278 - NA</name>
-	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250908">
+	<ExtendedData><SchemaData schemaUrl="#sites_fraser_2025_20250910">
 		<SimpleData name="id">199278</SimpleData>
 		<SimpleData name="bt_network_km">2.1</SimpleData>
 		<SimpleData name="bt_spawning_km">0</SimpleData>

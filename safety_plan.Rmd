@@ -125,16 +125,47 @@ font_set <- 8
 
 The latest version of this pdf can be downloaded [here](`r knitr::asis_output(link_pdf)`).
 
-<br>
+## Check In Procedures {-}
 
-This project has two primary goals. The first is to conduct fish passage (Phase 1) and habitat confirmation (Phase 2) assessments within the Tabor River, Willow River, and Lower Salmon River watershed groups. The second goal is to implement baseline monitoring at previously assessed and/or remediated crossings in the Nechako River, Upper Fraser River, Morkill River, and Francois Lake watershed groups. Fieldwork will include electrofishing at permitted sites and collection of environmental DNA (eDNA) samples. 
-
-<br>
-
-A summary of potential sites for fish passage assessments, habitat confirmation assessments, and electrofishing is provided in Table \@ref(tab:tab-electrofishing-sites) and Figure \@ref(fig:map-prep). Google Earth (KML) and Garmin (GPX) files for the proposed sites are available for download [here](`r knitr::asis_output(link_kml)`). 
-
+Call, text, or InReach Tara Stark (2505059854) each morning to share the plan for the day (i.e. name of roads and sites). Check in time is before 7pm each evening although we regularly check in throughout the day (ex. at arrival to site, 1pm and 4pm) on the InReach or by text and report position/provide updates.
 
 <br>
+
+### Procedures for Failed Check-In - for Check in person {-}
+
+Procedures are summarized in Figure \@ref(fig:flow-check-in-fail). If phone call or InReach check-in is not received by 7pm send text to InReach units, call or text cell phones of field crew members. If no response please call accommodations then personal emergency contacts to see if they have heard anything. Wait 1 hour and text InReach, text or call cell phones and personal emergency contacts and accommodations again. Repeat after 2 hours (9 pm) - if no response then notify the RCMP of a missing persons in field.
+
+<br>
+
+```{r flow-check-in-fail, fig.cap= 'Procedures for failed check-in', eval=T}
+#  Not sure why this doesn't work yet
+DiagrammeR::grViz("digraph rmarkdown{
+  
+graph[layout = dot, rankdir = LR]
+
+d1 [label = 'check-in not \n received by 7pm']
+d2 [label = 'Step 1 \n call or text cell phones \n of field crew members']
+d3 [label = 'Step 2 \n call accomodations']
+d4 [label = 'wait 1 hour (8pm) \n repeat Steps 1 & 2']
+d5 [label = 'wait 1 hour (9pm) \n repeat Steps 1 & 2']
+d6 [label = 'AT 9pm notify RCMP of \n missing persons in field after repeating Steps 1 & 2']
+
+
+d1 -> d2 -> d3 
+d4 -> d2 -> d3 
+d5 -> d2 -> d3 
+d5 -> d6
+}") |>  
+  DiagrammeRsvg::export_svg() %>%
+  charToRaw %>% 
+  rsvg::rsvg_png("fig/flow-check-in-fail.png")
+  
+  
+knitr::include_graphics("fig/flow-check-in-fail.png")
+
+```
+
+`r if(gitbook_on){knitr::asis_output("<br>")} else knitr::asis_output("<br><br><br>")`
 
 ## New Graph Environment Employee Information {.unnumbered}
 
@@ -153,7 +184,7 @@ Accommodations: `r hotel2`
 
 <br>
 
-## Crew Members {.unnumbered}
+## Collaborating Crew Members {.unnumbered}
 
 New Graph Employees Al Irvine and Lucy Schick may be joined by other groups/individuals from the area. All crew member information and emergency contacts can be found below.
 
@@ -180,6 +211,90 @@ tab_crew |>
                             full_width = TRUE,
                             font_size = font_set)
 ```
+
+
+## Nearest Hospitals {.unnumbered}
+
+```{r hospital-1, fig.cap=my_caption, fig.width=6, eval=TRUE}
+my_caption = paste(hospital_name, hospital_address, hospital_phone, sep = ' - ')
+
+##register google key defined in 'R/private_info.R' file
+ggmap::register_google(key = Sys.getenv('GOOG_API_KEY'))
+
+#define the area of the base map by using a bounding box 
+mybasemap <- ggmap::get_map(location = hospital_address,
+                     source = "google",
+                     zoom = 16,
+                    maptype = "roadmap")  
+
+# Extract the center coordinates from the map object
+center_lon <- attr(mybasemap, "bb")$ll.lon + (attr(mybasemap, "bb")$ur.lon - attr(mybasemap, "bb")$ll.lon) / 2
+center_lat <- attr(mybasemap, "bb")$ll.lat + (attr(mybasemap, "bb")$ur.lat - attr(mybasemap, "bb")$ll.lat) / 2
+
+# Plot the map with the hospital symbol at the center
+ggmap::ggmap(mybasemap) +
+  geom_text(aes(x = center_lon, y = center_lat), 
+            label = "H", 
+            size = 10, 
+            colour = "red", 
+            fontface = "bold")
+
+
+
+```
+
+<br>
+
+```{r hospital-2, fig.cap=my_caption, fig.width=6, eval=TRUE}
+my_caption = paste(hospital_name2, hospital_address2, hospital_phone2, sep = ' - ')
+
+##register google key defined in 'R/private_info.R' file
+ggmap::register_google(key = Sys.getenv('GOOG_API_KEY'))
+
+#define the area of the base map by using a bounding box 
+mybasemap <- ggmap::get_map(location = hospital_address2,
+                     source = "google",
+                     zoom = 16,
+                    maptype = "roadmap")  
+
+# Extract the center coordinates from the map object
+center_lon <- attr(mybasemap, "bb")$ll.lon + (attr(mybasemap, "bb")$ur.lon - attr(mybasemap, "bb")$ll.lon) / 2
+center_lat <- attr(mybasemap, "bb")$ll.lat + (attr(mybasemap, "bb")$ur.lat - attr(mybasemap, "bb")$ll.lat) / 2
+
+# Plot the map with the hospital symbol at the center
+ggmap::ggmap(mybasemap) +
+  geom_text(aes(x = center_lon, y = center_lat), 
+            label = "H", 
+            size = 10, 
+            colour = "red", 
+            fontface = "bold")
+
+
+
+```
+
+<br>
+
+## Emergency Response Plan {.unnumbered}
+
+New Graph Environment's detailed emergency response procedures can be found [here](https://www.newgraphenvironment.com/hsp/plans-and-assessments.html#emergency-response-plan-erp-and-procedures). These procedures should be reviewed and an emergency response plan should be completed for each job site. Our Emergency Responce Plan template can be downloaded [here](https://github.com/NewGraphEnvironment/hsp/blob/master/data/form_templates/ERP_template.pdf).
+
+<br>
+
+## Driving {.unnumbered}
+
+We will be driving on forest service roads where it is essential to exercise caution and adhere strictly to all radio use protocols to ensure our safety. Proper communication on these roads helps prevent accidents by keeping everyone informed about vehicle movements and road conditions. Please review the [resource road safety](https://www.newgraphenvironment.com/hsp/safe-work-procedures-and-practices.html#resource-road-safety) and [radio use](https://www.newgraphenvironment.com/hsp/safe-work-procedures-and-practices.html#radio-use) sections of our Health and Safety plan so that everyone stays safe. 
+
+<br>
+
+## Project Overview
+
+This project has two primary goals. The first is to conduct fish passage (Phase 1) and habitat confirmation (Phase 2) assessments within the Tabor River, Willow River, and Lower Salmon River watershed groups. The second goal is to implement baseline monitoring at previously assessed and/or remediated crossings in the Nechako River, Upper Fraser River, Morkill River, and Francois Lake watershed groups. Fieldwork will include electrofishing at permitted sites and collection of environmental DNA (eDNA) samples. 
+
+<br>
+
+A summary of potential sites for fish passage assessments, habitat confirmation assessments, and electrofishing is provided in Table \@ref(tab:tab-electrofishing-sites) and Figure \@ref(fig:map-prep). Google Earth (KML) and Garmin (GPX) files for the proposed sites are available for download [here](`r knitr::asis_output(link_kml)`). 
+
 
 <br>
 
@@ -316,79 +431,7 @@ eq |>
 
 \newpage
 
-## Nearest Hospitals {.unnumbered}
 
-```{r hospital-1, fig.cap=my_caption, fig.width=6, eval=TRUE}
-my_caption = paste(hospital_name, hospital_address, hospital_phone, sep = ' - ')
-
-##register google key defined in 'R/private_info.R' file
-ggmap::register_google(key = Sys.getenv('GOOG_API_KEY'))
-
-#define the area of the base map by using a bounding box 
-mybasemap <- ggmap::get_map(location = hospital_address,
-                     source = "google",
-                     zoom = 16,
-                    maptype = "roadmap")  
-
-# Extract the center coordinates from the map object
-center_lon <- attr(mybasemap, "bb")$ll.lon + (attr(mybasemap, "bb")$ur.lon - attr(mybasemap, "bb")$ll.lon) / 2
-center_lat <- attr(mybasemap, "bb")$ll.lat + (attr(mybasemap, "bb")$ur.lat - attr(mybasemap, "bb")$ll.lat) / 2
-
-# Plot the map with the hospital symbol at the center
-ggmap::ggmap(mybasemap) +
-  geom_text(aes(x = center_lon, y = center_lat), 
-            label = "H", 
-            size = 10, 
-            colour = "red", 
-            fontface = "bold")
-
-
-
-```
-
-<br>
-
-```{r hospital-2, fig.cap=my_caption, fig.width=6, eval=TRUE}
-my_caption = paste(hospital_name2, hospital_address2, hospital_phone2, sep = ' - ')
-
-##register google key defined in 'R/private_info.R' file
-ggmap::register_google(key = Sys.getenv('GOOG_API_KEY'))
-
-#define the area of the base map by using a bounding box 
-mybasemap <- ggmap::get_map(location = hospital_address2,
-                     source = "google",
-                     zoom = 16,
-                    maptype = "roadmap")  
-
-# Extract the center coordinates from the map object
-center_lon <- attr(mybasemap, "bb")$ll.lon + (attr(mybasemap, "bb")$ur.lon - attr(mybasemap, "bb")$ll.lon) / 2
-center_lat <- attr(mybasemap, "bb")$ll.lat + (attr(mybasemap, "bb")$ur.lat - attr(mybasemap, "bb")$ll.lat) / 2
-
-# Plot the map with the hospital symbol at the center
-ggmap::ggmap(mybasemap) +
-  geom_text(aes(x = center_lon, y = center_lat), 
-            label = "H", 
-            size = 10, 
-            colour = "red", 
-            fontface = "bold")
-
-
-
-```
-
-<br>
-
-## Emergency Response Plan {.unnumbered}
-
-New Graph Environment's detailed emergency response procedures can be found [here](https://www.newgraphenvironment.com/hsp/plans-and-assessments.html#emergency-response-plan-erp-and-procedures). These procedures should be reviewed and an emergency response plan should be completed for each job site. Our Emergency Responce Plan template can be downloaded [here](https://github.com/NewGraphEnvironment/hsp/blob/master/data/form_templates/ERP_template.pdf).
-
-<br>
-
-## Driving {.unnumbered}
-
-We will be driving on forest service roads where it is essential to exercise caution and adhere strictly to all radio use protocols to ensure our safety. Proper communication on these roads helps prevent accidents by keeping everyone informed about vehicle movements and road conditions. Please review the [resource road safety](https://www.newgraphenvironment.com/hsp/safe-work-procedures-and-practices.html#resource-road-safety) and [radio use](https://www.newgraphenvironment.com/hsp/safe-work-procedures-and-practices.html#radio-use) sections of our Health and Safety plan so that everyone stays safe. 
-
-<br>
 
 ## Field Plan {.unnumbered}
 
@@ -419,48 +462,6 @@ Digital field forms are used to collected data, utilizing [Mergin Maps](https://
 A field guide to freshwater fish identification, such as *Field Key to the Freshwater Fishes of British Columbia* by @mcphail_carveth1993FieldKey, can be useful during fieldwork. It is available for download [here](https://a100.gov.bc.ca/pub/acat/documents/r13659/486FieldKeytoFreshwaterFishes1993Part1of2_1210014849226_8e248a8d30d97e6c45ef54a340babd2ffb57b14a3b16.pdf).
 
 <br>
-
-### Check In Procedures {-}
-
-Call, text, or InReach Tara Stark (2505059854) each morning to share the plan for the day (i.e. name of roads and sites). Check in time is before 7pm each evening although we regularly check in throughout the day (ex. at arrival to site, 1pm and 4pm) on the InReach or by text and report position/provide updates.
-
-<br>
-
-#### Procedures for Failed Check-In - for Check in person {-}
-
-Procedures are summarized in Figure \@ref(fig:flow-check-in-fail). If phone call or InReach check-in is not received by 7pm send text to InReach units, call or text cell phones of field crew members. If no response please call accommodations then personal emergency contacts to see if they have heard anything. Wait 1 hour and text InReach, text or call cell phones and personal emergency contacts and accommodations again. Repeat after 2 hours (9 pm) - if no response then notify the RCMP of a missing persons in field.
-
-<br>
-
-```{r flow-check-in-fail, fig.cap= 'Procedures for failed check-in', eval=T}
-#  Not sure why this doesn't work yet
-DiagrammeR::grViz("digraph rmarkdown{
-  
-graph[layout = dot, rankdir = LR]
-
-d1 [label = 'check-in not \n received by 7pm']
-d2 [label = 'Step 1 \n call or text cell phones \n of field crew members']
-d3 [label = 'Step 2 \n call accomodations']
-d4 [label = 'wait 1 hour (8pm) \n repeat Steps 1 & 2']
-d5 [label = 'wait 1 hour (9pm) \n repeat Steps 1 & 2']
-d6 [label = 'AT 9pm notify RCMP of \n missing persons in field after repeating Steps 1 & 2']
-
-
-d1 -> d2 -> d3 
-d4 -> d2 -> d3 
-d5 -> d2 -> d3 
-d5 -> d6
-}") |>  
-  DiagrammeRsvg::export_svg() %>%
-  charToRaw %>% 
-  rsvg::rsvg_png("fig/flow-check-in-fail.png")
-  
-  
-knitr::include_graphics("fig/flow-check-in-fail.png")
-
-```
-
-`r if(gitbook_on){knitr::asis_output("<br>")} else knitr::asis_output("<br><br><br>")`
 
 
 ```{r load-sites-csv, results='hide', eval = T}
